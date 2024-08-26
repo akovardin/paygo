@@ -1,0 +1,8 @@
+*.env
+build/*
+bin/*
+Supfile.yml
+Taskfile.yaml
+data/*
+http/auth.http
+.vscode/settings.json
