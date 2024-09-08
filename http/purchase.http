@@ -1,0 +1,26 @@
+GET http://127.0.0.1:8081/v1/2ipc3erqkokl5kv/k9u6largvm5esjy/payments/purchase
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfcGJfdXNlcnNfYXV0aF8iLCJleHAiOjE3MjY0MjEwNTIsImlkIjoieW14YnZucXVicjdrbGlvIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.I-wnIpqA3sMbzgPO-fxkgSi3UorEEQ8RvDvonOI7Naw
+
+
+###
+
+GET http://127.0.0.1:8081/api/collections/payments/records
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfcGJfdXNlcnNfYXV0aF8iLCJleHAiOjE3MjY0MjYyMTksImlkIjoieW14YnZucXVicjdrbGlvIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.FkWfcuQ-io18iCm0AjmIJ7hz5tM0KC4H8Qni2iEBsbI
+
+
+###
+
+
+GET http://127.0.0.1:8081/api/collections/payments/records/ktp54hem9u0w2ph
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfcGJfdXNlcnNfYXV0aF8iLCJleHAiOjE3MjY0MjYyMTksImlkIjoieW14YnZucXVicjdrbGlvIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.FkWfcuQ-io18iCm0AjmIJ7hz5tM0KC4H8Qni2iEBsbI
+
+
+###
+
+POST http://127.0.0.1:8081/v1/payments/confirm?key=xxx
+Content-Type: application/x-www-form-urlencoded 
+User-Agent: AHC/2.1 
+
+notification_type=p2p-incoming&bill_id=&amount=130.43&datetime=2024-09-08T11%3A58%3A25Z&codepro=false&sender=41001000040&sha1_hash=8c8e011f7cf624e0923f959480b04fc4531e6778&test_notification=true&operation_label=&operation_id=test-notification&currency=643&label=

@@ -6,3 +6,4 @@ Taskfile.yaml
 data/*
 http/auth.http
 .vscode/settings.json
+deploy/*

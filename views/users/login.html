@@ -1,0 +1,21 @@
+{{define "title"}}Login{{end}}
+
+{{define "body"}}
+<div class="h-25"></div>
+    <h2>Login</h2>
+    <div class="row justify-content-center h-200">
+        <form action="/v1/user/send" method="post">
+            <div class="mb-2">
+                <label for="user-email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="user-email" name="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="row justify-content-md-end">
+                <div class="col-md-auto">
+                    <div class="h-50"></div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{{end}}

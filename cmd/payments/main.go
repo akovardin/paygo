@@ -10,6 +10,7 @@ import (
 
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/pocketbase"
+	"github.com/pocketbase/pocketbase/apis"
 	"github.com/pocketbase/pocketbase/core"
 	"github.com/pocketbase/pocketbase/plugins/migratecmd"
 	"github.com/pocketbase/pocketbase/tools/template"
@@ -29,6 +30,7 @@ func main() {
 		fx.Provide(pocketbase.New),
 		fx.Provide(template.NewRegistry),
 		fx.Provide(settings.New),
+
 		fx.Invoke(
 			migration,
 		),
@@ -44,12 +46,26 @@ func routing(
 	settings *settings.Settings,
 	home *handlers.Home,
 	products *handlers.Products,
+	payments *handlers.Payments,
+	users *handlers.Users,
 ) {
 	app.OnBeforeServe().Add(func(e *core.ServeEvent) error {
 		e.Router.GET("/", home.Home)
 
-		// listing
-		e.Router.GET("/:app/products", products.List)
+		v1 := e.Router.Group("/v1")
+		// products
+		v1.GET("/:app/products", products.List)
+
+		// payments
+		v1.GET("/:app/:product/payments/purchase", payments.Purchase, apis.RequireRecordAuth("users"))
+		v1.GET("/:app/:product/payments/success", payments.Success)
+		v1.POST("/payments/confirm", payments.Confirm)
+
+		// users
+		v1.GET("/user/login", users.Login)
+		v1.POST("/user/send", users.Send)
+		v1.POST("/user/:email/check", users.Check)
+		v1.GET("/user/success", users.Success)
 
 		// static
 		e.Router.GET("/static/*", func(c echo.Context) error {
@@ -70,26 +86,6 @@ func routing(
 
 		return nil
 
-	})
-
-	app.OnRecordBeforeUpdateRequest("artifacts").Add(func(e *core.RecordUpdateEvent) error {
-
-		// overwrite the submitted "active" field value to false
-		e.Record.Set("active", false)
-
-		// delete all artifact folder
-
-		return nil
-	})
-
-	app.OnRecordBeforeUpdateRequest("versions").Add(func(e *core.RecordUpdateEvent) error {
-
-		// overwrite the submitted "active" field value to false
-		e.Record.Set("active", false)
-
-		// delete version and update manifest
-
-		return nil
 	})
 
 	lc.Append(fx.Hook{
