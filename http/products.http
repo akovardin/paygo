@@ -2,3 +2,15 @@
 
 GET http://127.0.0.1:8081/v1/2ipc3erqkokl5kv/products
 Content-Type: application/json
+
+
+### list
+
+GET http://127.0.0.1:8081/api/collections/products/records?filter=(application%3D%272ipc3erqkokl5kv%27%20%26%26%20enabled%3Dtrue)
+Content-Type: application/json
+
+
+### list
+
+GET http://127.0.0.1:8081/api/collections/products/records
+Content-Type: application/json

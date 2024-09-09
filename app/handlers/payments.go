@@ -80,6 +80,7 @@ func (h *Payments) Purchase(c echo.Context) error {
 	record.Set("amount", product.GetFloat("price"))
 	record.Set("product", product.Id)
 	record.Set("user", user.Id)
+	record.Set("app", app)
 
 	if err := h.app.Dao().SaveRecord(record); err != nil {
 		return err

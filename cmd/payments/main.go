@@ -45,7 +45,6 @@ func routing(
 	lc fx.Lifecycle,
 	settings *settings.Settings,
 	home *handlers.Home,
-	products *handlers.Products,
 	payments *handlers.Payments,
 	users *handlers.Users,
 ) {
@@ -53,8 +52,6 @@ func routing(
 		e.Router.GET("/", home.Home)
 
 		v1 := e.Router.Group("/v1")
-		// products
-		v1.GET("/:app/products", products.List)
 
 		// payments
 		v1.GET("/:app/:product/payments/purchase", payments.Purchase, apis.RequireRecordAuth("users"))
