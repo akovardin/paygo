@@ -86,7 +86,11 @@ func (h *Payments) Purchase(c echo.Context) error {
 		return err
 	}
 
-	label := record.Id + ":" + record.GetString("product") + ":" + product.GetString("application")
+	label := Label{
+		Payment: record.Id,
+		Product: record.GetString("product"),
+		App:     product.GetString("application"),
+	}
 
 	html, err := h.registry.LoadFS(views.FS,
 		"layout.html",
@@ -98,7 +102,7 @@ func (h *Payments) Purchase(c echo.Context) error {
 		"product": record.GetString("product"),
 		"amount":  record.GetFloat("amount"),
 		"wallet":  application.GetString("wallet"),
-		"label":   label,
+		"label":   label.Format(),
 		"status":  record.GetString("status"),
 	})
 

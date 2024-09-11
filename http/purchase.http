@@ -6,7 +6,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfcGJf
 
 GET http://127.0.0.1:8081/api/collections/payments/records
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfcGJfdXNlcnNfYXV0aF8iLCJleHAiOjE3MjY0MjYyMTksImlkIjoieW14YnZucXVicjdrbGlvIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.FkWfcuQ-io18iCm0AjmIJ7hz5tM0KC4H8Qni2iEBsbI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjcyNTc5NTYsImlkIjoiaHo0MjlpZjQ2MjFlaDdkIiwidHlwZSI6ImFkbWluIn0.AK2X3ny17U5hXVPyXGTnUpNiOEwWDQVOteZNzFBu7Vw
 
 
 ###

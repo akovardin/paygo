@@ -1,6 +1,6 @@
 # Payments
 
-Сервис для обработки платежей через Yoomoney
+Сервис для приема платежей через Yoomoney
 
 ## Установка
 
@@ -12,3 +12,26 @@ docker run -v /home/user/data:/data  -p 8080:8080 registry.gitflic.ru/project/ko
 ```
 
 `/home/user/data` - дирректория, где будут находиться все данные сервиса
+
+## Подключение SDK
+
+Android SDK доступно тут [depot.kovardin.ru](https://depot.kovardin.ru/)
+
+Подключаем репозиторий:
+
+```gradle
+repositories {
+    maven {
+        name = "depot"
+        url = "https://depot.kovardin.ru/packages"
+    }
+}
+```
+
+Подключаем зависимость:
+
+```gradle
+dependencies {
+    implementation 'ru.kovardin:billing:0.1.3'
+}
+```

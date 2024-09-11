@@ -55,7 +55,7 @@ func routing(
 
 		// payments
 		v1.GET("/:app/:product/payments/purchase", payments.Purchase, apis.RequireRecordAuth("users"))
-		v1.GET("/:app/:product/payments/success", payments.Success)
+		v1.GET("/:app/:product/payments/success", payments.Success, apis.RequireRecordAuth("users"))
 		v1.POST("/payments/confirm", payments.Confirm)
 
 		// users
