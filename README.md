@@ -1,4 +1,4 @@
-# Payments
+# Paygo
 
 Сервис для приема платежей через Yoomoney
 

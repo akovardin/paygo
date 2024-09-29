@@ -1,4 +1,4 @@
-module gohome.4gophers.ru/kovardin/payments
+module gohome.4gophers.ru/kovardin/paygo
 
 go 1.22.2
 

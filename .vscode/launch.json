@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cmd/payments",
+            "name": "cmd/paygo",
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "cmd/payments/",
+            "program": "cmd/paygo/",
             "envFile": "${workspaceFolder}/local.env",
             "cwd": "${workspaceFolder}",
             "args": [

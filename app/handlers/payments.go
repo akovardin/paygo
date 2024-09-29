@@ -14,7 +14,7 @@ import (
 	"github.com/pocketbase/pocketbase/models"
 	"github.com/pocketbase/pocketbase/tools/template"
 
-	"gohome.4gophers.ru/kovardin/payments/views"
+	"gohome.4gophers.ru/kovardin/paygo/views"
 )
 
 const (

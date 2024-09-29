@@ -16,10 +16,10 @@ import (
 	"github.com/pocketbase/pocketbase/tools/template"
 	"go.uber.org/fx"
 
-	"gohome.4gophers.ru/kovardin/payments/app/handlers"
-	"gohome.4gophers.ru/kovardin/payments/app/settings"
-	_ "gohome.4gophers.ru/kovardin/payments/migrations"
-	"gohome.4gophers.ru/kovardin/payments/static"
+	"gohome.4gophers.ru/kovardin/paygo/app/handlers"
+	"gohome.4gophers.ru/kovardin/paygo/app/settings"
+	_ "gohome.4gophers.ru/kovardin/paygo/migrations"
+	"gohome.4gophers.ru/kovardin/paygo/static"
 )
 
 func main() {
@@ -97,7 +97,7 @@ func routing(
 	})
 }
 
-// go run cmd/depot/main.go migrate collections --dir ./data/
+// go run cmd/payments/main.go migrate collections --dir ./data/
 func migration(app *pocketbase.PocketBase) {
 	isGoRun := strings.HasPrefix(os.Args[0], os.TempDir())
 
