@@ -12,9 +12,9 @@ import (
 	"github.com/pocketbase/pocketbase/tokens"
 	"github.com/pocketbase/pocketbase/tools/template"
 
-	"gohome.4gophers.ru/kovardin/paygo/pkg/mail"
-	"gohome.4gophers.ru/kovardin/paygo/pkg/utils"
-	"gohome.4gophers.ru/kovardin/paygo/views"
+	"gohome.4gophers.ru/kovardin/globus/pkg/mail"
+	"gohome.4gophers.ru/kovardin/globus/pkg/utils"
+	"gohome.4gophers.ru/kovardin/globus/views"
 )
 
 type Users struct {

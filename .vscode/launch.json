@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cmd/paygo",
+            "name": "cmd/globus",
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "cmd/paygo/",
+            "program": "cmd/globus/",
             "envFile": "${workspaceFolder}/local.env",
             "cwd": "${workspaceFolder}",
             "args": [

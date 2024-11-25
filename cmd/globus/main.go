@@ -16,10 +16,10 @@ import (
 	"github.com/pocketbase/pocketbase/tools/template"
 	"go.uber.org/fx"
 
-	"gohome.4gophers.ru/kovardin/paygo/app/handlers"
-	"gohome.4gophers.ru/kovardin/paygo/app/settings"
-	_ "gohome.4gophers.ru/kovardin/paygo/migrations"
-	"gohome.4gophers.ru/kovardin/paygo/static"
+	"gohome.4gophers.ru/kovardin/globus/app/handlers"
+	"gohome.4gophers.ru/kovardin/globus/app/settings"
+	_ "gohome.4gophers.ru/kovardin/globus/migrations"
+	"gohome.4gophers.ru/kovardin/globus/static"
 )
 
 func main() {
