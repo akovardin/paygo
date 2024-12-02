@@ -8,10 +8,11 @@
 
 ```sh
 docker pull registry.gitflic.ru/project/kovardin/globus/globus
-docker run -v /home/user/data:/data  -p 8080:8080 registry.gitflic.ru/project/kovardin/globus/globus:latest --dir /data --dev  --http :8080 serve 
+docker run --name globus -d --rm -v /opt/globus/data:/data  -p 8080:8080 registry.gitflic.ru/project/kovardin/globus/globus:latest --dir /data --dev  --http :8080 serve
 ```
 
 `/home/user/data` - дирректория, где будут находиться все данные сервиса
+`--name globus` - имя контейнера
 
 ## Подключение SDK
 
